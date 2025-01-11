@@ -1,0 +1,195 @@
+#map {
+    width: 95vw;
+    height: 40vw;
+}
+@media (max-width: 800px) { 
+#map {height:100vw;}
+}
+#last_update { font-size: 12px;}
+#zeitpunkt { font-size: 14px;}
+#buttonInfo { font-size: 14px;}
+.invisible { visibility: hidden;}
+
+/*wasserstand plot */
+#plotWS {
+    width: 95vw;
+    height: 50vw;
+}
+/*niederschlag plot */
+#plot {
+    width: 95vw;
+    height: 50vw;
+}
+
+@media (min-width: 1024px) { 
+#plot {height: 15vw; }
+#plotWS {height: 15vw; } 
+}
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 10000; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links and header (flex table) */
+.header {
+    display: flex;
+    align-items: center; /* Vertically align items in the center */
+    justify-content: space-between; /* Space out items in the header */
+    padding: 10px;
+    background-color: #f1f1f1; /* Background color for the container */
+}
+
+.open-btn {
+    font-size: 25px;
+    cursor: pointer;
+    color: #111;
+}
+
+.right-outputs {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Push the outputs to the right */
+}
+
+.right-outputs output {
+    margin-left: 6px; /* Add space between the output fields */
+    font-size: 14px;
+}
+
+.sub-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space out items in the row */
+    padding: 5px;
+}
+
+.sub-row input[type="range"] {
+    width: 95vw; /* Adjust the width of the range slider */
+}
+
+.sub-row button {
+    background-color: #4CAF50; /* Bright green background */
+    color: white;
+    padding: 14px 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.sub-row button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.sub-row .right-aligned {
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Space closer to the button */
+    color: #e8090d;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 10000; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+/*legend at bottomleft */
+.info.legend {
+    background-color: white;
+    padding: 2px 4px;
+    font: 8px/16px Arial, Helvetica, sans-serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+}
+
+.info.legend i {
+    width: 10px;
+    height: 10px;
+    float: left;
+    margin-right: 1px;
+    opacity: 0.7;
+}
+
+.info.legend div {
+    display: flex;
+    align-items: left;
+}
+
+.info.legend h4 {
+    font-size: 8px; /* Adjust the font size as needed */
+}
+
+.info.legend p {
+font-size: 8px; /* Adjust the font size as needed */
+margin: 0;
+padding: 0;
+}
+
+/* Zoom Buttons in the middle and to the the top right  */
+#toggleZoomButton {
+    background-color: white; /* Bright green background */
+    color: black;
+    padding: 8px 6px;
+    border: 2px solid black;
+    cursor: pointer;
+    font-size: 10px;
+    border-radius: 5px;
+}
+#toggleZoomButton2 {
+    background-color: white; /* Bright green background */
+    color: black;
+    padding: 8px 6px;
+    border: 2px solid black;
+    cursor: pointer;
+    font-size: 10px;
+    border-radius: 5px;

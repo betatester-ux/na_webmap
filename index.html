@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/L.Control.Layers.Tree.css">
+        <link rel="stylesheet" href="css/qgis2web.css">
+        <link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/leaflet-control-geocoder.Geocoder.css">
+        <link rel="stylesheet" href="css/leaflet-measure.css">
+        <link rel="stylesheet" href="custom/custom_css.css">
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <title></title>
+    </head>
+    <body>
+        <div id="mySidenav" class="sidenav" onmouseover="keepOpen()" onmouseout="closeNav()">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="wasserstand.html">Wasserstand</a>
+            <a href="niederschlag.html">Niederschlag</a>
+            <a href="ki-algorithmus.html">KI-Algorithmus</a>
+            <a href="links.html">Nützliche Links</a>
+            <a href="impressum.html">Impressum</a>
+        </div>
+        <div class="header">
+            <span class="open-btn" onclick="openNav()">&#9776; Menu</span>
+        </div>
+        <main>
+        <h2>Startseite</h2>
+        <h3>Willkommen auf der Test-Seite vom Ingenieurbüro Reihsner</h3>
+        <div style="width: 100%; height: 70vh; overflow: auto">
+        <h3>Diese Seite ist einer <u><strong>operativen Wasserstand-Vorhersage mit Hilfe der <a href="ki-algorithmus.html">KI-Algorithmen</a></strong></u> gewidmet.</h3>
+        <p>Mit operativer Vorhersage (auch "Nowcasting" genannt) wird eine Vorhersage 
+        für die nächsten 6 bis 12 Stunden verstanden, die Einsatzkräften und Bevölkerung genügend Zeit für Vorwarnung, zum Aufbau der mobilen Schutzmauer sowie anderer Vorkehrungen 
+        zum Schutz der Menschen und Gebäude ermöglichen soll.
+        Solche Vorhersagen sind nichts neues, werden aber normalerweise nur für größere Flüsse unter dem Einsatz der klassischen 
+        hydrologischen Modelle betrieben und in Vorhersagezentrallen des Landes berechnet. Etwas Vergleichbares für kleine und kleinste Gewässer, abgesehen von reinem Monitoring, gibt es derzeit nicht.</p>
+        <p> Das dürfte sich aber schlagartig ändern. Im Grunde genommen, könnte <u>jede kleinste Stelle, die über einen Sensoren für Wasserstandsmessung und dessen Aufzeichnung 
+        </u><strong>von mindestens 6-12 Monaten</strong> verfügt, durch einen KI-Algorithmus ausgestattet werden und eine Prognose des Wasserstandsanstiegs liefern. Im Laufe der Zeit, 
+        je mehr und mehr Daten aufgezeichnet werden, lässt sich ggf. der KI-Algorithmus nochmals trainieren und die Vorhersage verbessern.</p><br>
+        <h3>Bedienungsanleitung und Erläuterung </h3>
+        <p>Ein regelmäßiges 'Neuladen' im Webbrowser ist notwendig zum Abrufen der neuesten Daten im Fall eines operativen Betriebs (sehe 'Disclaimer' weiter unten)</p>
+        
+        <p>Unter dem Menu in der oberen linken Ecke sind 2 wichtigste Bereiche zu finden:</p>
+        <ul>
+            <li><strong>Wasserstand</li>
+            <li>Niederschlag</strong></li>
+        </ul>
+        <p>Sämtliche Daten die unter dem <strong>'Niederschlag'</strong> zu sehen sind, stammen von Servern des Deutschen Wetterdienstes und können über Internet von jederman abgerufen werden. 
+        Der Zugriff auf die Daten selbst ist seit 2017 uneingeschränkt und frei verfügbar, aber die Verarbeitung dieser meteorologischen Daten (in spezifischen Dateiformaten) ist jedoch immer noch nicht einfach. 
+        Dies ändert sich allmählich mit zunehmender Akzeptanz und Verbreitung kostenloser Open-Source-GIS-Programme (QGIS).
+        <br>DWD betreibt seit fast 20 Jahren ein Weterradarsystem, mit Ausgsbe in räumlicher Auflösung von ca. 1x1 km, namens RADOLAN (Radar-Online-Aneichung). Dieses System (eine Art Archiv) ist ein 
+        relativ wenig bekanntes und m.M.n. äußerst unterschätztes technisches Meisterwerk. Mit ihm ist es möglich bereits 30 Minuten nach einem Regenereignis, also beinahe in Echtzeit, dessen Niederschlagshöhen 
+        zu sehen und numerisch festzustellen. Dazu kommt, ebenso vom DWD, die Vorhersage verschiedener Parameter (darunter Niederschlag und Temperatur), mit globalem Wettermodel (ICON) das im Bereich des Deutschlands 
+        auf eine räumliche Auflösung von normalerweise ca.13x13 auf etwa 2x2 km verdichtet wurde (ICON-D2).</p>
+        <p>Niederschlagsdaten dienen nur als 'Input' zur Wasserstandberechnung und diese ganze Niederschlag-Darstellung hat eher einen informativen Karakter. 
+        Um die starke räumliche und zeitliche Ungleichmäßigkeit des Regens besser zu verstehen ist Reiter 'Niederschlag' mit einem Zeitschieber versehen. 
+        So kann man immer, der Aktualisierungszeit vorangegangene 24 Stunden, sowie den geschätzten Niederschlag, 12 Stunden in die Zukunft, sehen. Diagramm und Darstellung des Niederschlags im Lageplan 
+        sind mittels dieses Schiebers miteinander synchronisiert. Ab 6 bis 12 Stunden lässt aber auch die Zuverlässigkeit der Regenvorhersage von DWD nach.</p>
+        <p>Da es sich hier um echte, tagesaktuelle Daten handelt, und wenn jemand einen sonnigen Tag erwischt hat, ist unter dem Reiter Niederschlag nicht viel zu sehen
+        In diesem Fall kann man einen Einblick in Funktionalität aus diesem Video bekommen. <a href="custom/erklaerung_video.mp4" target="_blank">Klicke hier, um das Video anzusehen</a></p>
+         
+        <p>Unter <strong>'Wasserstand'</strong> ist die Sensormessung für bis zu 30 vergangene Tage in einem Diagramm abrufbar. Dieses Diagramm wird durch anklicken eines Pegelpunktes aktiviert und ist dynamisch zoombar 
+        (2 Ecken Prinzip) und lesbar (durch Berühren der Wasserstandlinie). Dazu kommt das eigentliche Ergebnis aus KI-Analyse, nämlich, 
+        in magenta dargestellte Linie des, für die nächsten 6/12 Stunden vorhersagten, Wasserstands. Diese WS-Vorhersage basiert auf Analyse des vorherigen und zukünftigen Niederschlags sowie der vorherigen WS-Aufzeichnung. 
+        Wenn aktueller Wasserstand einige vordefinierte Warnschwellen über/unterschreitet, 
+        ändert sich auch die farbliche Darstellung des Pegelpunktes im Lageplan. Das kann auch, anders als hier dargestellt, ein einfaches Ampel-Warnsystem sein. Diese Warnschwellen würden als Basis für 
+        Versenden der automatischen Warnungen (EMails oder SMS-Benachrichtigungen) an zuständigen Stellen dienen.</p>
+        
+        <p>Diese Webseite ist absichtlich minimalistisch gehalten um sie einigermaßen auch an Handys brauchbar zu machen</p>
+        <p><strong>Disclaimer:</strong> In der Testphase werden nur die 8, von SGD betriebenen, Pegel in Einzugsgebieten der Lieser und Salm 'beschatet'. Da es keinen Zugang zum kontinuierlichen Datenstrom der Sensoren gibt, 
+        werden momentan die aktuellen Messdaten von Betreiberseite per Hand heruntergeladen. Die Aktualisierung der Seite erfolgt dementsprechend <u><strong>einmal täglich</strong>, 
+        vormittags und nicht am Wochenende.</u> Dies sollte im echten operativen Betrieb, natürlich im stündlichen Takt, für WS-Prognose, oder noch öfters für Ausgabe der Sensormessungen erfolgen.</p>
+        </div>
+        </main>
+
+        <script>
+        function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        }
+        function keepOpen() { 
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+        </script>
+    </body>
+</html>

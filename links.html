@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/L.Control.Layers.Tree.css">
+        <link rel="stylesheet" href="css/qgis2web.css">
+        <link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/leaflet-control-geocoder.Geocoder.css">
+        <link rel="stylesheet" href="css/leaflet-measure.css">
+        <link rel="stylesheet" href="custom/custom_css.css">
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <title></title>
+    </head>
+    <body>
+        <div id="mySidenav" class="sidenav" onmouseover="keepOpen()" onmouseout="closeNav()">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Startseite</a>
+            <a href="wasserstand.html">Wasserstand</a>
+            <a href="niederschlag.html">Niederschlag</a>
+            <a href="ki-algorithmus.html">KI-Algorithmus</a>
+            <a href="impressum.html">Impressum</a>
+        </div>
+        <div class="header">
+            <span class="open-btn" onclick="openNav()">&#9776; Menu</span>
+        </div>
+        <main>
+        <h2>Nützliche Links</h2>
+        <div style="width: 100%; height: 80vh; overflow: auto">
+        <h4>Niederschlag und Hochwasser:</h4>
+        <ul>
+        <li><a href= "https://www.hochwasserzentralen.info/warnungen" target="_blank" rel="noopener noreferrer">https://www.hochwasserzentralen.info/warnungen</a></li><br>
+        <li><a href= "https://www.hochwasser.rlp.de" target="_blank" rel="noopener noreferrer">https://www.hochwasser.rlp.de</a></li><br>
+        <li><a href= "https://www.dwd.de/DE/leistungen/radolan/radolan.html" target="_blank" rel="noopener noreferrer">Deutscher Wetterdienst- RADOLAN</a></li>
+            <ul>
+            <li><a href= "https://opendata.dwd.de/climate_environment/CDC/grids_germany/hourly/radolan/" target="_blank" rel="noopener noreferrer">https://opendata.dwd.de/climate_environment/CDC/grids_germany/hourly/radolan/</a></li>
+            <li><a href= "https://opendata.dwd.de/climate_environment/CDC/grids_germany/5_minutes/radolan/" target="_blank" rel="noopener noreferrer">https://opendata.dwd.de/climate_environment/CDC/grids_germany/5_minutes/radolan/</a></li><br>
+            </ul>
+        <li><a href= "https://www.dwd.de/DE/forschung/wettervorhersage/num_modellierung/01_num_vorhersagemodelle/icon_beschreibung.html" target="_blank" rel="noopener noreferrer">Deutscher Wetterdienst- ICON</a></li>
+            <ul>
+            <li><a href= "https://opendata.dwd.de/weather/nwp/" target="_blank" rel="noopener noreferrer">https://opendata.dwd.de/weather/nwp/</a></li><br>
+            </ul>
+        <li><a href= "https://www.dwd.de/DE/leistungen/uhi/info_methodic/01_hostrada.html" target="_blank" rel="noopener noreferrer">Deutscher Wetterdienst- HOSTRADA</a></li>
+            <ul>
+            <li><a href= "https://opendata.dwd.de/climate_environment/CDC/grids_germany/hourly/hostrada/" target="_blank" rel="noopener noreferrer">https://opendata.dwd.de/climate_environment/CDC/grids_germany/hourly/hostrada/</a></li>
+            </ul>
+        </ul>
+        <br>
+        <h4>Weiter unten sind zwar keine Weblinks mehr, sondern Verweise auf die eingesetzten Werkzeuge aufgeführt:</h4>
+        
+        <ul>
+            <li>QGIS</li>
+                <ul>
+                <li>Plugin 'qgis2web'</li>
+                
+                <li>Plugin 'radolan2map'</li>
+                </ul>
+            <li>Python mit folgenden zusätlich installierten Bibliotheken:</li>
+                <ul>
+                <li>tensorflow</li>
+                <li>keras</li>
+                <li>pandas</li>
+                <li>numpy</li>
+                <li>osgeo (gdal)</li>
+                <li>wradlib</li>
+                <li>BeautifulSoup (bs4)</li>
+                <li>requests</li>
+                <li>dateutil (tz)</li>
+                <li>matplotlib</li>
+                <li>pydsstools</li>
+                <li>xarray</li>
+                <li>pyproj</li>
+                <li>zahlreiche Standardbibliotheken die mit Python mitgeliefert werden:</li>
+                    <ul>
+                    <li>urllib</li>
+                    <li>datetime</li>
+                    <li>timedelta</li>
+                    <li>csv</li>
+                    <li>json</li>
+                    <li>os</li>
+                    <li>glob</li>
+                    <li>shutil</li>
+                    <li>sys</li>
+                    <li>tarfile</li>
+                    <li>bz2</li>
+                    <li>sqlite3</li>
+                    </ul>
+                </ul>
+            <li>Leaflet (unter QGIS-Plugin 'qgis2web')</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Plotly</li>
+            <li>HEC DSSVue (USACE)</li>
+            <li>Vortex (DSS)</li>
+            <li>Copilot</li>
+        </ul>
+
+        </div>
+        </main>
+
+        <script>
+        function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        }
+        function keepOpen() { 
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+        </script>
+    </body>
+</html>

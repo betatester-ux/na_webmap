@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/L.Control.Layers.Tree.css">
+        <link rel="stylesheet" href="css/qgis2web.css">
+        <link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/leaflet-control-geocoder.Geocoder.css">
+        <link rel="stylesheet" href="css/leaflet-measure.css">
+        <link rel="stylesheet" href="custom/custom_css.css">
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <title></title>
+    </head>
+    <body>
+        <div id="mySidenav" class="sidenav" onmouseover="keepOpen()" onmouseout="closeNav()">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Startseite</a>
+            <a href="wasserstand.html">Wasserstand</a>
+            <a href="niederschlag.html">Niederschlag</a>
+            <a href="ki-algorithmus.html">KI-Algorithmus</a>
+            <a href="links.html">Nützliche Links</a>
+        </div>
+        <div class="header">
+            <span class="open-btn" onclick="openNav()">&#9776; Menu</span>
+        </div>
+        <h2>Impressum</h2>
+        <br><br>
+        <h3>Bereich reserviert für Auftraggeber-Infos und Logo</h3>
+        <br><br><br><br>
+        <h4>Technische Umsetzung</h4>
+        <p>Radovan Ristic</p>
+        <address>
+        Ingenieurbüro Reihsner PartG mbB<br>
+        Eichenstr. 45<br>
+        54516 Wittlich<br>
+        Tel.: 06571 9025 36<br>
+        Fax.: 06571 9025 29<br>
+        E-mail:<a href="mailto:info@reihsner.de">info@reihsner.de</a><br>
+        Web:<a href="https://www.reihsner.de">www.reihsner.de</a><br>
+        <img src="custom/IBR.jpg" alt="Firmenlogo" width="144" height="144">
+        </address>
+        <footer>
+        <p></p>
+        </footer>
+
+        <script>
+        function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        }
+        function keepOpen() { 
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+        </script>
+    </body>
+</html>
