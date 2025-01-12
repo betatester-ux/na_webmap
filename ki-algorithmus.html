@@ -112,11 +112,13 @@
         Neben enormen Vorteilen, insbesondere für kleine und kleinste Gewässer, haben die KI-Algorithmen auch einige Einschränkungen in der Anwendung: 
         <ul>
             <li>Unser Algorithmus z.B. kann derzeit, wegen fehlenden 'Temperatur-Inputs', nur begrenzt und implizit (durch Benutzung des letzten Messwertes) die Schneeschmelze-Wasserstände vorhersagen </li>
-            <li>Durch besondere geologische Formationen beinflüsste Bereiche (wo die Bäche oder <a href= "https://de.wikipedia.org/wiki/Donauversinkung" target="_blank" rel="noopener noreferrer">ein ganzer Fluss</a>
+            <li>Durch besondere geologische Formationen beeinflüsste Bereiche (wo die Bäche oder <a href= "https://de.wikipedia.org/wiki/Donauversinkung" target="_blank" rel="noopener noreferrer">ein ganzer Fluss</a>
             vom Erdboden verschwinden) sind extrem schwierig mit diesem Ansatz zu modellieren</li>
-            <li>Eine starke antrophogene Veränderung des Einzugsgebietes (z.B. Versiegelung, Abholzung, aber auch die Waldbrände) können die bestehende NA-Abhängigkeiten zunichte machen und ggf. ein neues Training aber nur mit Daten nach der Veränderung erfordern </li>
+            <li>Örtliche Gegebenheiten und Anfälligkeiten der Messstelle. Eine Verklausung am Durchlass in der Nähe des Sensors ist beispielweise nicht unbedingt von Intensität des Regenereignisses abhängig. Solche Fälle müssen in verfügbaren
+            Sensordaten für das Algorithmus-Training identifiziert und ggf. korrigiert werden. Das Auftreten einer Verklausung durch Treibut kann kein KI-Algorithmus vorhersagen.</li>
+            <li>Eine starke antrophogene Veränderung des Einzugsgebietes (z.B. Versiegelung, Abholzung, aber auch Waldbrände) können die bestehende NA-Abhängigkeiten zunichte machen und ggf. ein neues Training allerdings nur mit Daten nach der Veränderung erfordern </li>
             <li>Einzugsgebiete die durch, von Menschen gesteuerte, Stauanlagen beeinflüsst sind. Ungesteuerte Rückhaltebecken sind dagegen kein Problem.</li>
-            <li>Grössere und komplexere Flussgebiete wo mehrere Faktoren zusammentreffen (Schneeschmelze, Stauanlagen mit Wasserkraftwerken, Schleusen, Schifffahrt, geregelte Ausflüsse usw.)</li>
+            <li>Größere und komplexere Flussgebiete wo mehrere Faktoren zusammentreffen (Schneeschmelze, Stauanlagen mit Wasserkraftwerken, Schleusen, Schifffahrt, geregelte Ausflüsse usw.)</li>
         </ul>
         </p>
         </div>
