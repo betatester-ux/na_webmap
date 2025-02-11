@@ -16,7 +16,7 @@ var json_PegelaktuelleWasserstnde_44 = {
                 "Gew\u00e4sser": "Salm",
                 "EZG": 192.1,
                 "Intern_Bez": "M-004",
-                "Farbe": "3",
+                "Farbe": "4",
                 "Link": "https://geodaten-wasser.rlp-umwelt.de/wasserstand/2674060400/stammdaten",
                 "Link_kurz": "<a href=\"https://geodaten-wasser.rlp-umwelt.de/wasserstand/2674060400/stammdaten\" target=\"_blank\" rel=\"noopenernoreferrer\">Link</a>"
             },
