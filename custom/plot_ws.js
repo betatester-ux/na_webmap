@@ -27,7 +27,7 @@ function updatePlotWS(markerId) {
 
     lastXValue_nominal = xValues_messung[xValues_messung.length - 1]; 
     startXValue = new Date(lastXValue_nominal.getTime() - 18 * 60 * 60 * 1000); // 24 hours before lastX
-    lastXValue = new Date(lastXValue_nominal.getTime() + 120 * 60 * 60 * 1000); // 6 or 12 hours after lastX
+    lastXValue = new Date(lastXValue_nominal.getTime() + 24 * 60 * 60 * 1000); // 6 or 12 hours after lastX
     
     const xValues_prognose = Object.keys(ws_prognose[markerId]).map(dateStr => new Date(dateStr));
     const yValues_prognose = Object.values(ws_prognose[markerId]);
