@@ -51,7 +51,9 @@ function updatePlotWS(markerId) {
     };
 
     // Calculate the maximum y-value and add 10%
-    const maxYValue = Math.max(...yValues_messung);
+    
+    const combined = [...yValues_messung, ...yValues_prognose];
+    const maxYValue = Math.max(...combined);
     const maxYValuePlus15Percent = maxYValue * 1.15;
 
     // Check for HW values and add horizontal lines if markerId matches
