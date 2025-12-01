@@ -76,7 +76,7 @@ var json_PegelaktuelleWasserstnde_44 = {
                 "Gew\u00e4sser": "Salm",
                 "EZG": 49.8,
                 "Intern_Bez": "M-006",
-                "Farbe": "3",
+                "Farbe": "4",
                 "Link": "https://geodaten-wasser.rlp-umwelt.de/wasserstand/2674030900/stammdaten",
                 "Link_kurz": "<a href=\"https://geodaten-wasser.rlp-umwelt.de/wasserstand/2674030900/stammdaten\" target=\"_blank\" rel=\"noopenernoreferrer\">Link</a>"
             },
@@ -96,7 +96,7 @@ var json_PegelaktuelleWasserstnde_44 = {
                 "Gew\u00e4sser": "Lieser",
                 "EZG": 274.1,
                 "Intern_Bez": "M-002",
-                "Farbe": "3",
+                "Farbe": "4",
                 "Link": "https://geodaten-wasser.rlp-umwelt.de/wasserstand/2678045000/stammdaten",
                 "Link_kurz": "<a href=\"https://geodaten-wasser.rlp-umwelt.de/wasserstand/2678045000/stammdaten\" target=\"_blank\" rel=\"noopenernoreferrer\">Link</a>"
             },
