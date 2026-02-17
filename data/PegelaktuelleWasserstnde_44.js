@@ -56,7 +56,7 @@ var json_PegelaktuelleWasserstnde_44 = {
                 "Gew\u00e4sser": "Lieser",
                 "EZG": 376.5,
                 "Intern_Bez": "M-001",
-                "Farbe": "4",
+                "Farbe": "-1",
                 "Link": "https://geodaten-wasser.rlp-umwelt.de/wasserstand/2678060900/stammdaten",
                 "Link_kurz": "<a href=\"https://geodaten-wasser.rlp-umwelt.de/wasserstand/2678060900/stammdaten\" target=\"_blank\" rel=\"noopenernoreferrer\">Link</a>"
             },
